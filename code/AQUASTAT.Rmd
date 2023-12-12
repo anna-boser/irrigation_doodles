@@ -7,24 +7,55 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(here)
+library(data.table)
+library(ggplot2)
+library(tidyr)
+library(dplyr)
 ```
 
-## R Markdown
+```{r}
+aquastat = fread(here("data/AQUASTAT Dissemination System.csv"), header = TRUE)
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+long_data <- pivot_longer(aquastat, cols = 5:ncol(aquastat), names_to = "Year", values_to = "Value", names_prefix = '"')
+wide_data <- select(long_data, "Country", "Variable", "Year", "Value") %>% pivot_wider(names_from = "Variable", values_from = "Value")
 ```
 
-## Including Plots
+```{r}
+african_countries <- c("Algeria", "Angola", "Benin", "Botswana", "Burkina Faso", "Burundi", "Cabo Verde", "Cameroon", "Central African Republic", "Chad", "Comoros", "Congo, Democratic Republic of the", "Congo, Republic of the", "Cote d’Ivoire", "Djibouti", "Egypt", "Equatorial Guinea", "Eritrea", "Eswatini", "Ethiopia", "Gabon", "Gambia", "Ghana", "Guinea", "Guinea-Bissau", "Kenya", "Lesotho", "Liberia", "Libya", "Madagascar", "Malawi", "Mali", "Mauritania", "Mauritius", "Morocco", "Mozambique", "Namibia", "Niger", "Nigeria", "Rwanda", "Sao Tome and Principe", "Senegal", "Seychelles", "Sierra Leone", "Somalia", "South Africa", "South Sudan", "Sudan", "Tanzania", "Togo", "Tunisia", "Uganda", "Zambia", "Zimbabwe")
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+SSA_countries <- c("Angola", "Benin", "Botswana", "Burkina Faso", "Burundi", "Cabo Verde", "Cameroon", "Central African Republic", "Chad", "Comoros", "Congo, Democratic Republic of the", "Congo, Republic of the", "Djibouti", "Equatorial Guinea", "Eritrea", "Eswatini", "Ethiopia", "Gabon", "Gambia", "Ghana", "Guinea", "Guinea-Bissau", "Kenya", "Lesotho", "Liberia", "Madagascar", "Malawi", "Mali", "Mauritania", "Mauritius", "Mozambique", "Namibia", "Niger", "Nigeria", "Rwanda", "Sao Tome and Principe", "Senegal", "Seychelles", "Sierra Leone", "Somalia", "South Africa", "South Sudan", "Sudan", "Tanzania", "Togo", "Uganda", "Zambia", "Zimbabwe")
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```{r}
+# plot the irrigated area time series for SSA countries
+long_data %>% 
+  filter(Country %in% SSA_countries, Variable == "Area equipped for irrigation: actually irrigated") %>%
+  group_by(Year) %>%
+  summarize(Value = sum(Value, na.rm = TRUE)) %>%
+  ggplot() +
+  geom_point(aes(x = Year, y = Value))
+```
+
+```{r}
+# plot the irrigated percent time series for SSA countries
+long_data %>% 
+  filter(Country %in% SSA_countries, Variable == "% of the cultivated area equipped for irrigation") %>%
+  group_by(Year) %>%
+  summarize(Value = mean(Value, na.rm = TRUE)) %>%
+  ggplot() +
+  geom_point(aes(x = Year, y = Value)) +
+  ylim(0, 100)
+```
+
+```{r}
+# plot the irrigated percent time series for SSA countries
+long_data %>% 
+  filter(Country %in% SSA_countries, Variable == "% of the area equipped for irrigation actually irrigated") %>%
+  group_by(Year) %>%
+  summarize(Value = mean(Value, na.rm = TRUE)) %>%
+  ggplot() +
+  geom_point(aes(x = Year, y = Value)) +
+  ylim(0, 100)
+```
+
