@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_814ed268c90a16fe6a477e809e3b260b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_814ed268c90a16fe6a477e809e3b260b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_814ed268c90a16fe6a477e809e3b260b = L.map(
+                "map_814ed268c90a16fe6a477e809e3b260b",
+                {
+                    center: [-9.732276375000001, 28.79123825],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                    name: "Esri Satellite",
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7f9f510b1f118b05869e9fb4cc1de042 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Esri", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_7f9f510b1f118b05869e9fb4cc1de042.addTo(map_814ed268c90a16fe6a477e809e3b260b);
+        
+    
+            var circle_marker_cf578d46fffc31623aa6112f4490e3fc = L.circleMarker(
+                [-9.728493, 28.801545],
+                {"bubblingMouseEvents": true, "color": "#e5779cff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e5779cff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_814ed268c90a16fe6a477e809e3b260b);
+        
+    
+        var popup_99499165c97843ad742a7225b88e8758 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_66c9bb7c8094bd6b0d88e7ed00296257 = $(`<div id="html_66c9bb7c8094bd6b0d88e7ed00296257" style="width: 100.0%; height: 100.0%;">Index: 965, Landcover: Wetland irrigated cropland</div>`)[0];
+                popup_99499165c97843ad742a7225b88e8758.setContent(html_66c9bb7c8094bd6b0d88e7ed00296257);
+            
+        
+
+        circle_marker_cf578d46fffc31623aa6112f4490e3fc.bindPopup(popup_99499165c97843ad742a7225b88e8758)
+        ;
+
+        
+    
+    
+            var circle_marker_31465aa03055669902e727725ba2b26d = L.circleMarker(
+                [-9.728428, 28.800371],
+                {"bubblingMouseEvents": true, "color": "#d38ab1ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d38ab1ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_814ed268c90a16fe6a477e809e3b260b);
+        
+    
+        var popup_d07f599869b7447f0a63ec460dcf51ea = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a29a671a342fa07ab45a9b6419082817 = $(`<div id="html_a29a671a342fa07ab45a9b6419082817" style="width: 100.0%; height: 100.0%;">Index: 966, Landcover: Rainfed cropland</div>`)[0];
+                popup_d07f599869b7447f0a63ec460dcf51ea.setContent(html_a29a671a342fa07ab45a9b6419082817);
+            
+        
+
+        circle_marker_31465aa03055669902e727725ba2b26d.bindPopup(popup_d07f599869b7447f0a63ec460dcf51ea)
+        ;
+
+        
+    
+    
+            var circle_marker_82f378dcc9f67ace318999aa50820c55 = L.circleMarker(
+                [-9.729711, 28.801724],
+                {"bubblingMouseEvents": true, "color": "#3c899fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3c899fff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_814ed268c90a16fe6a477e809e3b260b);
+        
+    
+        var popup_d1eb50b4b4388e26edfeb449181ab7d6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3373302423f10ccbebe2be1568c20b4f = $(`<div id="html_3373302423f10ccbebe2be1568c20b4f" style="width: 100.0%; height: 100.0%;">Index: 967, Landcover: Wetland</div>`)[0];
+                popup_d1eb50b4b4388e26edfeb449181ab7d6.setContent(html_3373302423f10ccbebe2be1568c20b4f);
+            
+        
+
+        circle_marker_82f378dcc9f67ace318999aa50820c55.bindPopup(popup_d1eb50b4b4388e26edfeb449181ab7d6)
+        ;
+
+        
+    
+    
+            var circle_marker_705213a72fc33f16d6ebca45e5a4958d = L.circleMarker(
+                [-9.741974, 28.802294],
+                {"bubblingMouseEvents": true, "color": "#e5779cff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e5779cff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_814ed268c90a16fe6a477e809e3b260b);
+        
+    
+        var popup_bc54119faffd3fab1f4d8c07c5357072 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3cd8d65593c6bb94cf189bfaa363d3cc = $(`<div id="html_3cd8d65593c6bb94cf189bfaa363d3cc" style="width: 100.0%; height: 100.0%;">Index: 968, Landcover: Wetland irrigated cropland</div>`)[0];
+                popup_bc54119faffd3fab1f4d8c07c5357072.setContent(html_3cd8d65593c6bb94cf189bfaa363d3cc);
+            
+        
+
+        circle_marker_705213a72fc33f16d6ebca45e5a4958d.bindPopup(popup_bc54119faffd3fab1f4d8c07c5357072)
+        ;
+
+        
+    
+    
+            var circle_marker_3774a2361fc1e00a5b84e138072cdb1d = L.circleMarker(
+                [-9.72645, 28.799264],
+                {"bubblingMouseEvents": true, "color": "#a05297ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a05297ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_814ed268c90a16fe6a477e809e3b260b);
+        
+    
+        var popup_9d4c543c830e657686792823482eee2c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_31e81be04bf2bbaa23dd1fe9ab3c5f6f = $(`<div id="html_31e81be04bf2bbaa23dd1fe9ab3c5f6f" style="width: 100.0%; height: 100.0%;">Index: 969, Landcover: Light vegetation</div>`)[0];
+                popup_9d4c543c830e657686792823482eee2c.setContent(html_31e81be04bf2bbaa23dd1fe9ab3c5f6f);
+            
+        
+
+        circle_marker_3774a2361fc1e00a5b84e138072cdb1d.bindPopup(popup_9d4c543c830e657686792823482eee2c)
+        ;
+
+        
+    
+    
+            var circle_marker_f159bc4544b1e0f7e9c0ed7d5b82ed59 = L.circleMarker(
+                [-9.730278, 28.799367],
+                {"bubblingMouseEvents": true, "color": "#e5779cff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e5779cff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_814ed268c90a16fe6a477e809e3b260b);
+        
+    
+        var popup_a4beeb8e30751dc021f4fc13c59f135f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_70762bffcb7c91f5d06352fce7d64bf9 = $(`<div id="html_70762bffcb7c91f5d06352fce7d64bf9" style="width: 100.0%; height: 100.0%;">Index: 970, Landcover: Wetland irrigated cropland</div>`)[0];
+                popup_a4beeb8e30751dc021f4fc13c59f135f.setContent(html_70762bffcb7c91f5d06352fce7d64bf9);
+            
+        
+
+        circle_marker_f159bc4544b1e0f7e9c0ed7d5b82ed59.bindPopup(popup_a4beeb8e30751dc021f4fc13c59f135f)
+        ;
+
+        
+    
+    
+            var circle_marker_8847b558668424c2cd3241b82f7e779e = L.circleMarker(
+                [-9.730099, 28.798047],
+                {"bubblingMouseEvents": true, "color": "#d38ab1ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d38ab1ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_814ed268c90a16fe6a477e809e3b260b);
+        
+    
+        var popup_bb6cc8322f400623f76ea41bf07189a1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9066873438378f4f52acdf19a777e33b = $(`<div id="html_9066873438378f4f52acdf19a777e33b" style="width: 100.0%; height: 100.0%;">Index: 971, Landcover: Rainfed cropland</div>`)[0];
+                popup_bb6cc8322f400623f76ea41bf07189a1.setContent(html_9066873438378f4f52acdf19a777e33b);
+            
+        
+
+        circle_marker_8847b558668424c2cd3241b82f7e779e.bindPopup(popup_bb6cc8322f400623f76ea41bf07189a1)
+        ;
+
+        
+    
+    
+            var circle_marker_ea8983f5ee8a724b68d5d4f03ffeacc6 = L.circleMarker(
+                [-9.730318, 28.80665],
+                {"bubblingMouseEvents": true, "color": "#e41a1cff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e41a1cff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_814ed268c90a16fe6a477e809e3b260b);
+        
+    
+        var popup_aeb959fb953af1db544ab22c4fa367dd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_36c8a0d4d02ce61921dcbc07ac0adc1d = $(`<div id="html_36c8a0d4d02ce61921dcbc07ac0adc1d" style="width: 100.0%; height: 100.0%;">Index: 972, Landcover: Dense vegetation</div>`)[0];
+                popup_aeb959fb953af1db544ab22c4fa367dd.setContent(html_36c8a0d4d02ce61921dcbc07ac0adc1d);
+            
+        
+
+        circle_marker_ea8983f5ee8a724b68d5d4f03ffeacc6.bindPopup(popup_aeb959fb953af1db544ab22c4fa367dd)
+        ;
+
+        
+    
+    
+            var circle_marker_155422037c50f481049d58c5d3726493 = L.circleMarker(
+                [-9.732612, 28.778736],
+                {"bubblingMouseEvents": true, "color": "#e5779cff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e5779cff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_814ed268c90a16fe6a477e809e3b260b);
+        
+    
+        var popup_bed7cdea442ecf354431f800bd526bd5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f3f316f7a74caca1d904b95f7a5c35b1 = $(`<div id="html_f3f316f7a74caca1d904b95f7a5c35b1" style="width: 100.0%; height: 100.0%;">Index: 973, Landcover: Wetland irrigated cropland</div>`)[0];
+                popup_bed7cdea442ecf354431f800bd526bd5.setContent(html_f3f316f7a74caca1d904b95f7a5c35b1);
+            
+        
+
+        circle_marker_155422037c50f481049d58c5d3726493.bindPopup(popup_bed7cdea442ecf354431f800bd526bd5)
+        ;
+
+        
+    
+    
+            var circle_marker_62d5bc2bc68606c34f8fe6b29381e012 = L.circleMarker(
+                [-9.731597, 28.779585],
+                {"bubblingMouseEvents": true, "color": "#3c899fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3c899fff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_814ed268c90a16fe6a477e809e3b260b);
+        
+    
+        var popup_dc828fe58f23d9bb57cf09a244697e5c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4835db6b16694f30773a2156059fb489 = $(`<div id="html_4835db6b16694f30773a2156059fb489" style="width: 100.0%; height: 100.0%;">Index: 974, Landcover: Wetland</div>`)[0];
+                popup_dc828fe58f23d9bb57cf09a244697e5c.setContent(html_4835db6b16694f30773a2156059fb489);
+            
+        
+
+        circle_marker_62d5bc2bc68606c34f8fe6b29381e012.bindPopup(popup_dc828fe58f23d9bb57cf09a244697e5c)
+        ;
+
+        
+    
+    
+            var circle_marker_fd7978c448d743592a2461c7abc76371 = L.circleMarker(
+                [-9.732774, 28.782765],
+                {"bubblingMouseEvents": true, "color": "#e5779cff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e5779cff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_814ed268c90a16fe6a477e809e3b260b);
+        
+    
+        var popup_566e997e3c653299836370090eee3b2c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_13f000d4804fbb6589185d72053418ce = $(`<div id="html_13f000d4804fbb6589185d72053418ce" style="width: 100.0%; height: 100.0%;">Index: 975, Landcover: Wetland irrigated cropland</div>`)[0];
+                popup_566e997e3c653299836370090eee3b2c.setContent(html_13f000d4804fbb6589185d72053418ce);
+            
+        
+
+        circle_marker_fd7978c448d743592a2461c7abc76371.bindPopup(popup_566e997e3c653299836370090eee3b2c)
+        ;
+
+        
+    
+    
+            var circle_marker_d0b007005dddb69746250583320634e8 = L.circleMarker(
+                [-9.733627, 28.780373],
+                {"bubblingMouseEvents": true, "color": "#e5779cff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e5779cff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_814ed268c90a16fe6a477e809e3b260b);
+        
+    
+        var popup_befd63818fa70ec5d88246ce2fd2f4f4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5982d884b26a183500bffc4b494db5e4 = $(`<div id="html_5982d884b26a183500bffc4b494db5e4" style="width: 100.0%; height: 100.0%;">Index: 976, Landcover: Wetland irrigated cropland</div>`)[0];
+                popup_befd63818fa70ec5d88246ce2fd2f4f4.setContent(html_5982d884b26a183500bffc4b494db5e4);
+            
+        
+
+        circle_marker_d0b007005dddb69746250583320634e8.bindPopup(popup_befd63818fa70ec5d88246ce2fd2f4f4)
+        ;
+
+        
+    
+    
+            var circle_marker_679d93fadee0fb62ba41ba60f75b0261 = L.circleMarker(
+                [-9.735015, 28.780041],
+                {"bubblingMouseEvents": true, "color": "#d38ab1ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d38ab1ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_814ed268c90a16fe6a477e809e3b260b);
+        
+    
+        var popup_3470c685c315849d1415a132a5b1288e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d4fc14389cd8c97d463cb5b963236a88 = $(`<div id="html_d4fc14389cd8c97d463cb5b963236a88" style="width: 100.0%; height: 100.0%;">Index: 977, Landcover: Rainfed cropland</div>`)[0];
+                popup_3470c685c315849d1415a132a5b1288e.setContent(html_d4fc14389cd8c97d463cb5b963236a88);
+            
+        
+
+        circle_marker_679d93fadee0fb62ba41ba60f75b0261.bindPopup(popup_3470c685c315849d1415a132a5b1288e)
+        ;
+
+        
+    
+    
+            var circle_marker_adfb8b4f3f3780d747a98e939e90eaeb = L.circleMarker(
+                [-9.734161, 28.782482],
+                {"bubblingMouseEvents": true, "color": "#d38ab1ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d38ab1ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_814ed268c90a16fe6a477e809e3b260b);
+        
+    
+        var popup_8189650dabf6c1b249833c6fe3cd5d76 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ac399fe09a496f7cad2fed823591e23a = $(`<div id="html_ac399fe09a496f7cad2fed823591e23a" style="width: 100.0%; height: 100.0%;">Index: 978, Landcover: Rainfed cropland</div>`)[0];
+                popup_8189650dabf6c1b249833c6fe3cd5d76.setContent(html_ac399fe09a496f7cad2fed823591e23a);
+            
+        
+
+        circle_marker_adfb8b4f3f3780d747a98e939e90eaeb.bindPopup(popup_8189650dabf6c1b249833c6fe3cd5d76)
+        ;
+
+        
+    
+    
+            var circle_marker_1e505c7eea32a85d68c7a7b39cee287b = L.circleMarker(
+                [-9.734966, 28.782786],
+                {"bubblingMouseEvents": true, "color": "#a05297ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a05297ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_814ed268c90a16fe6a477e809e3b260b);
+        
+    
+        var popup_211c983e900dad9b40938bbc411b1f32 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6303831322c028823548cf44b59afdf4 = $(`<div id="html_6303831322c028823548cf44b59afdf4" style="width: 100.0%; height: 100.0%;">Index: 979, Landcover: Light vegetation</div>`)[0];
+                popup_211c983e900dad9b40938bbc411b1f32.setContent(html_6303831322c028823548cf44b59afdf4);
+            
+        
+
+        circle_marker_1e505c7eea32a85d68c7a7b39cee287b.bindPopup(popup_211c983e900dad9b40938bbc411b1f32)
+        ;
+
+        
+    
+    
+            var circle_marker_3c8f8ce952c320824cf8a48f491962ff = L.circleMarker(
+                [-9.735919, 28.783782],
+                {"bubblingMouseEvents": true, "color": "#e41a1cff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e41a1cff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_814ed268c90a16fe6a477e809e3b260b);
+        
+    
+        var popup_20d0f04f03ffe84a8a34828e1445cd47 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c35a8e0f047b39b6848ba7f243c975aa = $(`<div id="html_c35a8e0f047b39b6848ba7f243c975aa" style="width: 100.0%; height: 100.0%;">Index: 980, Landcover: Dense vegetation</div>`)[0];
+                popup_20d0f04f03ffe84a8a34828e1445cd47.setContent(html_c35a8e0f047b39b6848ba7f243c975aa);
+            
+        
+
+        circle_marker_3c8f8ce952c320824cf8a48f491962ff.bindPopup(popup_20d0f04f03ffe84a8a34828e1445cd47)
+        ;
+
+        
+    
+</script>
+</html>
